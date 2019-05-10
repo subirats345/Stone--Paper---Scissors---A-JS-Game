@@ -14,7 +14,7 @@ It works directly on the browser
 
 ### Installing
 
-Download the project, and open it on the Browser (or try it live : [Demo Link]([https://link](https://subirats345.github.io/Stone--Paper---Scissors---A-JS-Game/)))
+Download the project and open it on the Browser (or try it live : [Demo Link]([https://link](https://subirats345.github.io/Stone--Paper---Scissors---A-JS-Game/)))
 
 ## Built With
 

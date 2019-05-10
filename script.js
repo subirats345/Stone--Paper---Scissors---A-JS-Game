@@ -26,64 +26,27 @@ $(document).ready(function() {
 
     // Ho wins?    
     function comparissons(ComSelection, userSelection) {
+
+        if (ComSelection === 'Paper' && userSelection === 'Rock' || ComSelection === 'Scissors' && userSelection === 'Paper' || ComSelection === 'Rock' && userSelection === 'Scissors') {
+            comPoints++;
+            $('audio#pop2')[0].play()
+            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
+            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
+            endGame();
+            game(options);
+
+        }
+        if (ComSelection === 'Rock' && userSelection === 'Paper' || ComSelection === 'Paper' && userSelection === 'Scissors' || ComSelection === 'Scissors' && userSelection === 'Rock') {
+            userPoints++;
+            $('audio#pop1')[0].play()
+            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
+            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
+            endGame();
+            game(options);
+        }
         if (ComSelection === userSelection) {
             $('audio#pop5')[0].play()
             $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}. ¯\\_(ツ)_/¯`);
-            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
-            endGame();
-            game(options);
-
-        }
-        if (ComSelection === 'Paper' && userSelection === 'Rock') {
-            comPoints++;
-            $('audio#pop2')[0].play()
-            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
-            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
-            endGame();
-            game(options);
-
-        }
-        if (ComSelection === 'Rock' && userSelection === 'Paper') {
-            userPoints++;
-            $('audio#pop1')[0].play()
-            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
-            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
-            endGame();
-            game(options);
-
-        }
-        if (ComSelection === 'Scissors' && userSelection === 'Paper') {
-            comPoints++;
-            $('audio#pop2')[0].play()
-            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
-            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
-            endGame();
-            game(options);
-
-        }
-        if (ComSelection === 'Paper' && userSelection === 'Scissors') {
-            userPoints++;
-            $('audio#pop1')[0].play()
-            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
-            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
-            endGame();
-            game(options);
-
-        }
-        if (ComSelection === 'Scissors' && userSelection === 'Rock') {
-            userPoints++;
-            $('audio#pop1')[0].play()
-            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
-            $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
-
-            endGame();
-            game(options);
-
-        }
-        if (ComSelection === 'Rock' && userSelection === 'Scissors') {
-            comPoints++;
-            $('audio#pop2')[0].play()
-            $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
             $('.punctuation').text(`User ${userPoints} - COM ${comPoints}.`);
             endGame();
             game(options);
