@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // Initializing the variables
-    const options = ['Paper', 'Stone', 'Scissors'];
+    const options = ['Paper', 'Rock', 'Scissors'];
 
     let userPoints = 0;
     let comPoints = 0;
@@ -34,7 +34,7 @@ $(document).ready(function() {
             game(options);
 
         }
-        if (ComSelection === 'Paper' && userSelection === 'Stone') {
+        if (ComSelection === 'Paper' && userSelection === 'Rock') {
             comPoints++;
             $('audio#pop2')[0].play()
             $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
@@ -43,7 +43,7 @@ $(document).ready(function() {
             game(options);
 
         }
-        if (ComSelection === 'Stone' && userSelection === 'Paper') {
+        if (ComSelection === 'Rock' && userSelection === 'Paper') {
             userPoints++;
             $('audio#pop1')[0].play()
             $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
@@ -70,7 +70,7 @@ $(document).ready(function() {
             game(options);
 
         }
-        if (ComSelection === 'Scissors' && userSelection === 'Stone') {
+        if (ComSelection === 'Scissors' && userSelection === 'Rock') {
             userPoints++;
             $('audio#pop1')[0].play()
             $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
@@ -80,7 +80,7 @@ $(document).ready(function() {
             game(options);
 
         }
-        if (ComSelection === 'Stone' && userSelection === 'Scissors') {
+        if (ComSelection === 'Rock' && userSelection === 'Scissors') {
             comPoints++;
             $('audio#pop2')[0].play()
             $('.subtitles').text(`The user has choosen ${userSelection} and the COM ${ComSelection}.`);
